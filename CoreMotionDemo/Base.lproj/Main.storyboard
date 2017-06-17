@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="c7c-xp-nPl">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Accelerometer-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="AccelerometerExampleVC" customModule="CoreMotionDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,83 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5qI-dh-Ho6">
+                                <rect key="frame" x="46" y="52" width="62" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.9578167796" green="0.44939213989999999" blue="0.25086134669999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Accelerometer" image="ic_accelerometer" id="ayl-J9-y3n"/>
+                    <connections>
+                        <outlet property="dropView" destination="5qI-dh-Ho6" id="rgD-Aq-tOM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="364" y="130"/>
+        </scene>
+        <!--Gyroscope-->
+        <scene sceneID="sF8-DO-ydt">
+            <objects>
+                <viewController id="qlO-b2-9nw" customClass="GyroExampleVC" customModule="CoreMotionDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="txk-Hl-QVN"/>
+                        <viewControllerLayoutGuide type="bottom" id="XeI-P7-Sk0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fQn-YS-s6J">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Gyroscope" image="ic_gryrometer" id="Uv7-Cw-9LC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QQK-hJ-Mug" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="364" y="799"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="g0T-0X-ZR8">
+            <objects>
+                <viewController id="Ymv-Jp-BjP" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6I7-3I-I7u"/>
+                        <viewControllerLayoutGuide type="bottom" id="7bj-NO-Go4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="epa-oc-xc9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="l9q-1I-MeM"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dPa-34-Rrj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="836" y="-755"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="2N2-bg-510">
+            <objects>
+                <tabBarController id="c7c-xp-nPl" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="qWW-30-iY6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="DVb-4P-5Ad"/>
+                        <segue destination="qlO-b2-9nw" kind="relationship" relationship="viewControllers" id="E7t-5Y-uQy"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CKX-JC-dv8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-582" y="500"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ic_accelerometer" width="28" height="28"/>
+        <image name="ic_gryrometer" width="28" height="28"/>
+    </resources>
 </document>

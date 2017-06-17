@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		133FAC0C1EF4ED9D00D43E4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133FAC0B1EF4ED9D00D43E4B /* AppDelegate.swift */; };
-		133FAC0E1EF4ED9D00D43E4B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133FAC0D1EF4ED9D00D43E4B /* ViewController.swift */; };
+		133FAC0E1EF4ED9D00D43E4B /* AccelerometerExampleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133FAC0D1EF4ED9D00D43E4B /* AccelerometerExampleVC.swift */; };
 		133FAC111EF4ED9D00D43E4B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 133FAC0F1EF4ED9D00D43E4B /* Main.storyboard */; };
 		133FAC131EF4ED9D00D43E4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 133FAC121EF4ED9D00D43E4B /* Assets.xcassets */; };
 		133FAC161EF4ED9D00D43E4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 133FAC141EF4ED9D00D43E4B /* LaunchScreen.storyboard */; };
+		133FAC1F1EF505A300D43E4B /* GyroExampleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133FAC1E1EF505A300D43E4B /* GyroExampleVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		133FAC081EF4ED9D00D43E4B /* CoreMotionDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreMotionDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		133FAC0B1EF4ED9D00D43E4B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		133FAC0D1EF4ED9D00D43E4B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		133FAC0D1EF4ED9D00D43E4B /* AccelerometerExampleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccelerometerExampleVC.swift; sourceTree = "<group>"; };
 		133FAC101EF4ED9D00D43E4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		133FAC121EF4ED9D00D43E4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		133FAC151EF4ED9D00D43E4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		133FAC171EF4ED9D00D43E4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		133FAC1E1EF505A300D43E4B /* GyroExampleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GyroExampleVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +56,23 @@
 		133FAC0A1EF4ED9D00D43E4B /* CoreMotionDemo */ = {
 			isa = PBXGroup;
 			children = (
-				133FAC0B1EF4ED9D00D43E4B /* AppDelegate.swift */,
-				133FAC0D1EF4ED9D00D43E4B /* ViewController.swift */,
+				133FAC0D1EF4ED9D00D43E4B /* AccelerometerExampleVC.swift */,
+				133FAC1E1EF505A300D43E4B /* GyroExampleVC.swift */,
 				133FAC0F1EF4ED9D00D43E4B /* Main.storyboard */,
+				133FAC1D1EF5051B00D43E4B /* SupportingFiles */,
+			);
+			path = CoreMotionDemo;
+			sourceTree = "<group>";
+		};
+		133FAC1D1EF5051B00D43E4B /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				133FAC0B1EF4ED9D00D43E4B /* AppDelegate.swift */,
 				133FAC121EF4ED9D00D43E4B /* Assets.xcassets */,
 				133FAC141EF4ED9D00D43E4B /* LaunchScreen.storyboard */,
 				133FAC171EF4ED9D00D43E4B /* Info.plist */,
 			);
-			path = CoreMotionDemo;
+			name = SupportingFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +148,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				133FAC0E1EF4ED9D00D43E4B /* ViewController.swift in Sources */,
+				133FAC0E1EF4ED9D00D43E4B /* AccelerometerExampleVC.swift in Sources */,
 				133FAC0C1EF4ED9D00D43E4B /* AppDelegate.swift in Sources */,
+				133FAC1F1EF505A300D43E4B /* GyroExampleVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,6 +277,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = RF7N2574KF;
 				INFOPLIST_FILE = CoreMotionDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = VKP.CoreMotionDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -278,6 +291,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = RF7N2574KF;
 				INFOPLIST_FILE = CoreMotionDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = VKP.CoreMotionDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
